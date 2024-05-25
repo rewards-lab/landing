@@ -1,17 +1,18 @@
 import { Component, inject } from '@angular/core';
 import { SafePipe } from '@luismdev/ngx-utils/pipes';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { interval } from 'rxjs';
 import { environment } from '../../../../../../environments/environment';
+import { Dash } from '../../../../shared/interfaces/dash.interface';
+import { Feature } from '../../../../shared/interfaces/feature.interface';
+import { HowItWorks } from '../../../../shared/interfaces/how-it-works.interface';
 import { BrandsModel } from '../../../../shared/models/brands.model';
-import { HowItWorksModel } from '../../../../shared/models/how-it-works.model';
-import { FeaturesModel } from '../../../../shared/models/features.model';
 import { CodePlatformsModel } from '../../../../shared/models/code-platforms.model';
 import { ConsoleCodeModel } from '../../../../shared/models/console-code.model';
 import { DashModel } from '../../../../shared/models/dash.model';
+import { FeaturesModel } from '../../../../shared/models/features.model';
+import { HowItWorksModel } from '../../../../shared/models/how-it-works.model';
 import { MarqueeModel } from '../../../../shared/models/marquee.model';
-import { HowItWorks } from '../../../../shared/interfaces/how-it-works.interface';
-import { Feature } from '../../../../shared/interfaces/feature.interface';
-import { Dash } from '../../../../shared/interfaces/dash.interface';
 
 @Component({
   selector: 'app-landing',

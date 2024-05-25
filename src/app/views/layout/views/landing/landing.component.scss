@@ -1,5 +1,6 @@
 @import 'bootstrap/scss/functions';
 @import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
 
 :host {
   display: block;
@@ -9,6 +10,24 @@
   // background-position: 50%;
   // background-size: 1090px;
 
+  .title-bg {
+    z-index: -1;
+    top: 0%;
+    mask-image: radial-gradient(ellipse, black 0%, transparent 80%);
+    position: absolute;
+    height: 1000px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
+    margin-left: 0;
+    left: 0%;
+    width: 100%;
+    @include media-breakpoint-up(sm) {
+      left: 50%;
+      margin-left: -500px;
+      width: 1000px;
+    }
+  }
+
   .icon-square {
     width: 70px;
     height: 70px;
@@ -16,17 +35,18 @@
     margin-bottom: 1rem;
   }
   h1 {
-    background: linear-gradient(to right, var(--bs-primary) 20%, $pink-500 80%);
-    background-clip: text;
-    // font-size: 72px;
-    -webkit-text-fill-color: transparent;
+    // background: linear-gradient(to right, var(--bs-primary) 20%, $indigo-500 80%);
+    // background-clip: text;
+    // // font-size: 72px;
+    // -webkit-text-fill-color: transparent;
   }
 
   .main-bg {
-    width: 1000px;
-    height: 500px;
-    background-size: cover !important;
+    width: 100%;
+    height: 400px;
+    background-size: contain !important;
     position: relative;
+    background-repeat: no-repeat;
     border-radius: 4px;
     &::after {
       content: '';
@@ -65,15 +85,39 @@
     top: 50%;
     transform: translateX(-50%) translateY(-50%);
     &::after {
-      content: '';
+      // content: '';
       width: 100%;
       height: 100%;
-      background: conic-gradient(from 0deg at 50% 50%, var(--bs-primary) 0deg, #d63384 54deg, var(--bs-primary) 106deg, #d63384 360deg);
+      background: conic-gradient(
+        from 0deg at 50% 50%,
+        var(--bs-primary) 0deg,
+        $indigo-500 54deg,
+        var(--bs-primary) 106deg,
+        $indigo-500 360deg
+      );
       border-radius: 50%;
-      opacity: 0.6;
+      opacity: 0.3;
       position: absolute;
       z-index: -1;
     }
+  }
+
+  .how-it-works-img {
+    margin-top: -50px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+  .how-it-works-bg {
+    z-index: 0;
+    top: -25%;
+    left: -10%;
+    // mask-image: radial-gradient(ellipse, black 20%, transparent 90%);
+    position: absolute;
+    width: 120%;
+    height: 150%;
+    background-size: 16px 16px;
+    background-image: radial-gradient(circle, var(--bs-secondary-bg) 1px, transparent 1px);
+    // opacity: 0.6;
   }
 
   .console-bg {
@@ -97,7 +141,7 @@
   }
 
   .line {
-    background: linear-gradient(to right, var(--bs-primary), $pink-500);
+    background: linear-gradient(to right, var(--bs-primary), $indigo-500);
     height: 55px;
     width: 150%;
     position: absolute;
@@ -135,30 +179,60 @@
     }
   }
   .feature-group {
-    padding: 5rem 0;
+    padding: 10rem 0;
     border-width: 0.1rem;
     border-style: solid;
-    border-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, var(--bs-secondary-bg) 20%, var(--bs-secondary-bg) 80%, rgba(0, 0, 0, 0))
-      1 100%;
+    border-image: linear-gradient(to bottom, var(--bs-secondary-bg) 0%, var(--bs-secondary-bg) 80%, rgba(0, 0, 0, 0)) 1 100%;
     border-right: none;
     border-top: none;
+    border-color: var(--bs-secondary-bg);
     border-bottom: none;
+    transition: 1.3s;
     .feature {
       cursor: pointer;
-      border-left: 0.3rem solid transparent;
-      margin-left: -0.2rem;
+      border-left: 0.1rem solid transparent;
+      margin-left: -0.1rem;
+      border-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent) 1;
+      &:hover {
+        color: var(--bs-primary);
+        margin-left: -0.1rem;
+        border-left: 0.1rem solid var(--bs-emphasis-color);
+        border-image: linear-gradient(to bottom, transparent, var(--bs-emphasis-color), var(--bs-emphasis-color), transparent) 1;
+        h5 {
+          color: var(--bs-emphasis-color) !important;
+        }
+      }
       &.active {
-        border-left: 0.3rem solid var(--bs-primary);
-        border-image: linear-gradient(to bottom, var(--bs-primary), $pink-500) 1;
+        border-left: 0.1rem solid var(--bs-emphasis-color);
+        border-image: linear-gradient(to bottom, transparent, var(--bs-emphasis-color), var(--bs-emphasis-color), transparent) 1;
+      }
+      .description {
+        min-height: 80px;
+        display: block;
       }
     }
   }
   .feature-img {
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 300px;
     background-size: cover;
     background-position: center;
     position: relative;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    @keyframes floating {
+      0% {
+        transform: translate(0);
+      }
+      50% {
+        transform: translateY(15px);
+      }
+      100% {
+        transform: translate(0);
+      }
+    }
     &::after {
       content: '';
       width: 100%;
@@ -180,10 +254,13 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: 20px 20px;
+    background-size: 24px 24px;
     background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
   }
+
   ::ng-deep pre {
+    font-family: monospace;
+    font-size: 1rem;
     .hljs-keyword {
       color: $indigo-300;
     }
@@ -196,6 +273,14 @@
     .hljs-number {
       color: $yellow-300;
     }
+  }
+
+  .dash {
+    background-color: rgba($black, 0.35);
+    box-shadow:
+      0 -0.5px #ffffff08,
+      inset 0 1px 1px #0000004d,
+      0 0.5px 0.5px #ffffff14;
   }
 }
 

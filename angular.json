@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "landing-starter": {
+    "rewards-lab-landing": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -12,13 +12,13 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "landing-starter",
+      "prefix": "rewards-lab-landing",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "allowedCommonJsDependencies": ["lodash"],
-            "outputPath": "dist/landing-starter",
+            "outputPath": "dist/rewards-lab-landing",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": ["zone.js"],
@@ -33,7 +33,7 @@
                 "output": "/assets/auth"
               }
             ],
-            "styles": ["src/styles.scss"],
+            "styles": ["src/styles.scss", "src/app/shared/styles/satoshi.scss"],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared/styles"]
             },
@@ -89,13 +89,13 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "landing-starter:build:production"
+              "buildTarget": "rewards-lab-landing:build:production"
             },
             "development": {
-              "buildTarget": "landing-starter:build:development"
+              "buildTarget": "rewards-lab-landing:build:development"
             },
             "pre": {
-              "buildTarget": "landing-starter:build:pre"
+              "buildTarget": "rewards-lab-landing:build:pre"
             }
           },
           "defaultConfiguration": "development",
@@ -106,7 +106,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "landing-starter:build"
+            "buildTarget": "rewards-lab-landing:build"
           }
         },
         "test": {

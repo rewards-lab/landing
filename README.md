@@ -15,11 +15,11 @@ Clone and run the Docker container for [Arcane auth](https://github.com/arcane-a
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repository/landing-starter.git
+   git clone https://github.com/your-repository/rewards-lab-landing.git
    ```
 2. Navigate to the project directory:
    ```bash
-   cd landing-starter
+   cd rewards-lab-landing
    ```
 3. Install dependencies:
    ```bash

@@ -4,7 +4,7 @@ import { FooterComponent } from '../../shared/components/footer/footer.component
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'landing-starter-layout',
+  selector: 'rewards-lab-landing-layout',
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss'],
   standalone: true,

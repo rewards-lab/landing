@@ -3,7 +3,7 @@ import { Dash } from '../interfaces/dash.interface';
 export const DashModel: Record<string, Dash[]> = {
   en: [
     {
-      img: 'https://via.placeholder.com/50x50',
+      icon: 'ti ti-check',
       title: 'Dash 1',
       description: `Dash 1 description `,
     },

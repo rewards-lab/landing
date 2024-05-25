@@ -4,7 +4,7 @@ import { environment } from './../../../../../environments/environment';
 import { ThemeSwitcherComponent } from '@luismdev/ngx-utils/theme-switcher';
 
 @Component({
-  selector: 'landing-starter-footer',
+  selector: 'rewards-lab-landing-footer',
   standalone: true,
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.scss',

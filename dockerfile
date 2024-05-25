@@ -14,7 +14,7 @@ RUN npm run build:pro
 
 FROM nginx:latest
 
-COPY  --from=builder /app/dist/landing-starter /usr/share/nginx/html
+COPY  --from=builder /app/dist/rewards-lab-landing /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80 

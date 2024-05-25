@@ -3,6 +3,18 @@
 @import 'bootstrap/scss/mixins';
 
 :host {
+  .pricing-bg {
+    z-index: -1;
+    top: 0%;
+    left: 50%;
+    margin-left: -500px;
+    mask-image: radial-gradient(ellipse, black 0%, transparent 80%);
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    background-size: 20px 20px;
+    background-image: radial-gradient(circle, var(--bs-secondary-bg) 2px, transparent 2px);
+  }
   h1 {
     background: linear-gradient(to right, var(--bs-primary) 20%, $pink-500 80%);
     background-clip: text;

@@ -1,26 +1,29 @@
 {
   "LANDING": {
-    "TITLE": "Landing title",
-    "SUBTITLE": "Subtitle",
-    "BUTTON_1": "Primary button",
-    "BUTTON_2": "Secondary button",
-    "MAIN_BG": "https://via.placeholder.com/1000x500",
+    "TITLE": "Loyalty Rewarded",
+    "SUBTITLE": "Easily integrate customizable and scalable reward systems to <br>foster customer loyalty and increase retention.",
+    "BUTTON_1": "Get Started",
+    "BUTTON_2": "Learn More",
+    "MAIN_BG": "https://landing-open-rewards.web.app/assets/landing-main3.svg",
     "TRUSTED_BY": "Trusted by engineers at",
     "FEATURES_TITLE": "Features",
     "FEATURES_SUBTITLE": "Features subtitle",
     "FEATURES_SOON": "soon",
     "FEATURES_TITLE_2": "Features title 2",
     "FEATURES_SUBTITLE_2": "Features subtitle 2",
+    "DASH_TITLE": "Integrations",
+    "DASH_SUBTITLE": "Integrate the best reward system with your favorite apps. Connect your favorite apps with our API.",
     "GET_STARTED": "Get started",
-    "THE_CODE": "The Code!",
-    "THE_CODE_DESCRIPTION": "The code description",
-    "THE_CODE_QUOTE": "The code quote",
-    "THE_CODE_QUOTE_2": "The code quote 2",
+    "THE_CODE": "Best-in-class developer experience",
+    "THE_CODE_DESCRIPTION": "Build and integrate a rewards, achievements, and battlepass library into your brand loyalty applications. Whether you're developing for a single database or millions with a per-tenant architecture for mobile, web, or desktop, our solution provides all the tools you need for quick and efficient integration.",
+    "THE_CODE_QUOTE": "\"Rewards Lab is a powerful platform that allows companies to programmatically deploy and maintain a comprehensive rewards, achievements, and battlepass system for brand loyalty initiatives.\"",
+    "THE_CODE_QUOTE_2": "Luis M. Torres",
+    "THE_CODE_QUOTE_3": "CTO, Dixper",
     "THE_CODE_TAB_1": "Feature 1",
     "THE_CODE_TAB_2": "Feature 2",
     "THE_CODE_TAB_3": "Feature 3",
     "CODE_THE_WAY_YOU_WANT": "Code the way you want",
-    "CODE_THE_WAY_YOU_WANT_DESCRIPTION": "Code the way you want description",
+    "CODE_THE_WAY_YOU_WANT_DESCRIPTION": "We support many SDKs making Appwrite flexible to your needs and ensuring you can code with the language you want at any time.    ",
     "VIEW_ALL_SDKS": "View all SDKs"
   },
   "PRICING": {
@@ -48,7 +51,7 @@
     "DOCUMENTATION": "Documentation"
   },
   "COMMON": {
-    "LINK_GITHUB": "https://github.com/luismdev/landing-starter",
-    "LINK_DOCS": "https://github.com/luismdev/landing-starter"
+    "LINK_GITHUB": "https://github.com/luismdev/rewards-lab-landing",
+    "LINK_DOCS": "https://github.com/luismdev/rewards-lab-landing"
   }
 }
