@@ -271,6 +271,12 @@ $font-size-base: 14px;
 $input-btn-font-size: $font-size-base;
 $btn-font-size: $font-size-base;
 $btn-font-weight: 600;
+$btn-border-radius: 0rem;
+$btn-border-radius-sm: 0rem;
+$btn-border-radius-lg: 0rem;
+$btn-border-radius-xl: 0rem;
+$btn-border-radius-xxl: 0rem;
+$btn-border-radius-pill: 0rem;
 
 $border-radius: 0.5rem;
 $button-border-radius: 0.5rem;
@@ -279,9 +285,16 @@ $border-radius-sm: 0.5rem;
 $border-radius-lg: 0.5rem;
 $border-radius-xl: 1rem;
 $border-radius-xxl: 2rem;
-$border-radius-pill: 50rem;
+$border-radius-pill: 0rem;
 
 $card-spacer-y: 2rem;
 $card-spacer-x: 2rem;
+$badge-border-radius: 0.5rem;
+
+blockquote {
+  border-left: 0.25rem solid $primary;
+  padding-left: 1rem;
+  margin-left: 0;
+}
 
 @import 'bootstrap/scss/bootstrap';

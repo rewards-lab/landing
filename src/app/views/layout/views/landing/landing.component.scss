@@ -197,20 +197,27 @@
       cursor: pointer;
       border-left: 0.1rem solid transparent;
       margin-left: -0.1rem;
-      border-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent) 1;
+      // border-image: linear-gradient(to bottom, transparent, transparent, transparent, transparent) 1;
 
       &:hover {
         color: var(--bs-primary);
         margin-left: -0.1rem;
-        border-left: 0.1rem solid var(--bs-emphasis-color);
-        border-image: linear-gradient(to bottom, transparent, var(--bs-emphasis-color), var(--bs-emphasis-color), transparent) 1;
+        border-left: 0.1rem solid var(--bs-primary);
+        // border-image: linear-gradient(to bottom, transparent, var(--bs-primary), var(--bs-primary), transparent) 1;
         h5 {
-          color: var(--bs-emphasis-color) !important;
+          background-color: var(--bs-primary) !important;
+          color: var(--bs-secondary-bg) !important;
         }
       }
       &.active {
-        border-left: 0.1rem solid var(--bs-emphasis-color);
-        border-image: linear-gradient(to bottom, transparent, var(--bs-emphasis-color), var(--bs-emphasis-color), transparent) 1;
+        color: var(--bs-primary);
+        margin-left: -0.1rem;
+        border-left: 0.1rem solid var(--bs-primary);
+        // border-image: linear-gradient(to bottom, transparent, var(--bs-primary), var(--bs-primary), transparent) 1;
+        h5 {
+          background-color: var(--bs-primary) !important;
+          color: var(--bs-secondary-bg) !important;
+        }
       }
       .description {
         min-height: 100px;

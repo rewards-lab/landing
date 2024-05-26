@@ -45,7 +45,7 @@
     "GO_TO_CONSOLE": "Go to console"
   },
   "FOOTER": {
-    "LOGO": "https://via.placeholder.com/34x34",
+    "LOGO": "/assets/images/logo-min.png",
     "ALL_RIGHTS_RESERVED": "ⓒ {{year}} {{name}} all rights reserved",
     "VERSION": "Version {{version}}",
     "DOCUMENTATION": "Documentation"
