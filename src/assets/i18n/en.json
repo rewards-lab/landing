@@ -1,6 +1,6 @@
 {
   "LANDING": {
-    "TITLE": "Loyalty Rewarded",
+    "TITLE": "Gamified rewards for <br>your brand",
     "SUBTITLE": "Easily integrate customizable and scalable reward systems to <br>foster customer loyalty and increase retention.",
     "BUTTON_1": "Get Started",
     "BUTTON_2": "Learn More",
@@ -38,7 +38,7 @@
     }
   },
   "HEADER": {
-    "LOGO": "https://via.placeholder.com/200x37",
+    "LOGO": "/assets/images/logo.png",
     "PRICING": "Pricing",
     "DOCUMENTATION": "Documentation",
     "STAR_ON_GITHUB": "Star on Github",

@@ -33,7 +33,13 @@
                 "output": "/assets/auth"
               }
             ],
-            "styles": ["src/styles.scss", "src/app/shared/styles/satoshi.scss"],
+            "styles": [
+              "src/styles.scss",
+              "src/app/shared/styles/satoshi.scss",
+              "src/app/shared/styles/colors.scss",
+              "node_modules/@tabler/icons-webfont/dist/tabler-icons.min.css",
+              "node_modules/@luismdev/ngx-error-handler/src/lib/styles/ngx-error-handler.scss"
+            ],
             "stylePreprocessorOptions": {
               "includePaths": ["src/app/shared/styles"]
             },

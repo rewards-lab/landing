@@ -1,12 +1,9 @@
-<section class="px-4 pt-5 my-5 text-center overflow-hidden">
+<section class="px-4 pt-5 my-5 text-center">
   <div class="title-bg"></div>
-  <h1 class="display-1 text-primary lh-1 fw-bolder d-flex flex-column mt-5">
-    <span [innerHTML]="'LANDING.TITLE' | translate"></span>
-    <!-- <span>screenshot</span> -->
-  </h1>
-  <div class="col-lg-6 mx-auto mb-5 mt-3 pb-5">
-    <p class="fs-5 text-center text-body-secondary" [innerHTML]="'LANDING.SUBTITLE' | translate"></p>
-    <div class="d-grid gap-4 d-sm-flex justify-content-sm-center mt-4">
+  <h1 class="text-primary lh-1 d-flex flex-column mt-5" [innerHTML]="'LANDING.TITLE' | translate"></h1>
+  <div class="col-lg-6 mx-auto mb-5 mt-5 pb-5">
+    <p class="fs-4 text-center text-body-secondary" [innerHTML]="'LANDING.SUBTITLE' | translate"></p>
+    <div class="d-grid gap-4 d-sm-flex justify-content-sm-center mt-5">
       <button type="button" class="btn btn-primary btn-lg px-4">
         {{ 'LANDING.BUTTON_1' | translate }}
       </button>
@@ -15,9 +12,31 @@
       </button>
     </div>
   </div>
-  <div class="container my-5 d-none d-lg-flex justify-content-center">
-    <div class="main-bg img-fluid rounded-4 mt-4" [style.backgroundImage]="'url(' + ('LANDING.MAIN_BG' | translate) + ')'"></div>
+</section>
+
+<section class="">
+  <div class="container d-none d-lg-flex justify-content-center z-2 position-relative">
+    <div
+      class="card main-bg img-fluid rounded-4 p-5"
+      style="height: 600px; background-position: center !important"
+      [style.backgroundImage]="'url(' + ('LANDING.MAIN_BG' | translate) + ')'"
+    ></div>
   </div>
+  <section class="d-none d-lg-flex text-center z-1 position-relative" style="padding: 200px 0rem 6rem; margin-top: -150px">
+    <div class="top-0 brands-img-scroll w-100 h-100 position-absolute z-0 p-5">
+      <div class="top-0 bg bg-primary w-100 h-100 z-0 rounded-5"></div>
+    </div>
+    <div class="container px-5 pt-3 z-1 position-relative">
+      <h5 class="mb-4 fs-4 fw-bold text-gray-900" [innerHTML]="'LANDING.TRUSTED_BY' | translate"></h5>
+      <div class="row row-cols-1 row-cols-lg-5 flex-wrap justify-content-center px-5">
+        @for (brand of brands; track brand) {
+          <div class="col p-5 py-3">
+            <img class="brand img-fluid" [src]="brand" alt="" />
+          </div>
+        }
+      </div>
+    </div>
+  </section>
 </section>
 
 <!-- <section class="my-5 p-5 text-center">
@@ -34,11 +53,11 @@
 </section> -->
 
 <section class="container mt-5 pt-5">
-  <div class="row pt-5 mt-5 position-relative">
+  <div class="row position-relative">
     <div class="feature-1"></div>
     @for (item of howItWorks; track item; let i = $index) {
       <div class="mt-4" [class]="i === 0 || i === 5 ? 'col-lg-6' : 'col-lg-3'">
-        <div class="card overflow-hidden mb-5 h-100">
+        <div class="card mb-5 h-100" [class]="'card-scroll card-scroll-' + (i + 1)">
           <!-- <div class="item-1"></div> -->
           <div class="how-it-works-bg"></div>
           <div class="card-body pb-0 position-relative z-2">
@@ -61,7 +80,7 @@
 <section class="px-lg-5">
   <div class="container px-lg-5">
     <div class="row px-5">
-      <div class="col-lg-6 offset-lg-1">
+      <div class="col-lg-6 offset-lg-1 features-scroll">
         <ul class="feature-group">
           <!-- <li class="list-group-item mb-5 px-5">
             <h2 class="fw-bold display-6" [innerHTML]="'LANDING.FEATURES_TITLE' | translate"></h2>
@@ -73,7 +92,7 @@
               (click)="activeFeature = i"
             >
               <div class="ms-2 me-auto">
-                <div class="d-flex align-items-center gap-2">
+                <div class="d-flex align-items-center gap-3">
                   <h5
                     class="fw-semibold fs-4"
                     [class]="activeFeature !== i ? 'text-body-tertiary' : 'text-body-emphasis'"
@@ -94,7 +113,9 @@
       <div class="d-none col-lg-5 d-lg-flex justify-content-center align-items-center position-relative">
         <!-- <img height="200" alt="" class="w-100 object-fit-contain z-1" [src]="features[activeFeature].img" /> -->
         <div class="feature-bg"></div>
-        <div class="feature-img" [style.backgroundImage]="'url(' + features[activeFeature].img + ')'"></div>
+        <div class="feature-img-scroll">
+          <div class="feature-img" [style.backgroundImage]="'url(' + features[activeFeature].img + ')'"></div>
+        </div>
       </div>
     </div>
   </div>
@@ -118,7 +139,7 @@
           <div class="row row-cols-2 row-cols-lg-4">
             @for (item of dash; track item; let i = $index) {
               <div class="col mb-4 mb-lg-0">
-                <div class="card">
+                <div class="card" [class]="'dash-scroll dash-scroll-' + (i + 1)">
                   <div class="card-body d-flex flex-column">
                     @if (item.img) {
                       <img class="mb-5 img-fluid" [src]="item.img" width="50" height="50" />
@@ -139,7 +160,7 @@
   </div>
 </section>
 
-<section class="overflow-hidden mt-0 pt-0 mt-lg-5 pt-lg-5">
+<section class="mt-0 pt-0 mt-lg-5 pt-lg-5">
   <div class="container my-0 py-0 my-lg-5 py-lg-5">
     <div class="row my-0 my-lg-5 py-5 px-4 px-lg-0">
       <div class="col-md-5 mb-5 mb-lg-0">
@@ -157,7 +178,7 @@
       </div>
       <div class="col-md-6 offset-md-1 card-console d-flex justify-content-center position-relative">
         <div class="console-bg"></div>
-        <div class="card w-100">
+        <div class="card w-100 console-scroll">
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
@@ -182,6 +203,7 @@
           </div>
           <div class="card-body pt-0">
             <pre class="m-0" [innerHTML]="code | safe: 'html'"></pre>
+            <div class="flickering"></div>
           </div>
         </div>
       </div>
@@ -198,7 +220,7 @@
   <div class="row flex-wrap">
     @for (feature of features; track feature; let i = $index) {
       <div class="mb-4" [class]="feature.col">
-        <div class="card overflow-hidden h-100 d-flex flex-column justify-content-between ele">
+        <div class="card  h-100 d-flex flex-column justify-content-between ele">
           <img class="w-100 object-fit-contain z-1" height="200" [src]="feature.img" alt="" />
           <div class="feature-1"></div>
           <div class="card-body d-flex align-items-center flex-column">
@@ -213,7 +235,7 @@
 
 <!-- <section class="py-5 my-5 position-relative">
   <div class="line"></div>
-  <div class="marquee overflow-hidden">
+  <div class="marquee ">
     <div class="marquee-content">
       @for (item of marquee; track item; let i = $index) {
         <div class="marquee-item">
@@ -224,10 +246,12 @@
   </div>
 </section> -->
 
-<section class="overflow-hidden position-relative p-lg-5 p-4" style="margin-top: 7rem; margin-bottom: 5rem">
+<section class="position-relative p-lg-5 p-4" style="margin-top: 7rem; margin-bottom: 5rem">
   <div class="container position-relative">
     <div class="console-bg"></div>
-    <div class="position-relative p-5 text-muted bg-body border border-dashed rounded-5 row mt-0 row-cols-1 row-cols-lg-2 g-5 py-5">
+    <div
+      class="platforms-scroll position-relative p-5 text-muted bg-body border border-dashed rounded-5 row mt-0 row-cols-1 row-cols-lg-2 g-5 py-5"
+    >
       <div class="col d-flex flex-column align-items-start gap-2 px-0 px-lg-5 my-0 my-lg-5">
         <h2 class="fw-bold text-body-emphasis" [innerHTML]="'LANDING.CODE_THE_WAY_YOU_WANT' | translate"></h2>
         <p class="text-body-secondary" [innerHTML]="'LANDING.CODE_THE_WAY_YOU_WANT_DESCRIPTION' | translate"></p>
