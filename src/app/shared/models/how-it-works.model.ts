@@ -9,13 +9,13 @@ export const HowItWorksModel: Record<string, HowItWorks[]> = {
     },
     {
       img: '/assets/images/feature-2.png',
-      title: 'Campaigns',
-      description: `Enable customers to join achievement-based campaigns, offering benefits like points and rewards, and configure campaigns that reward both milestone completion and full challenge achievement.`,
+      title: 'Data driven',
+      description: `Track and analyze the effectiveness of achievement-based campaigns to enhance loyalty marketing and business outcomes.`,
     },
     {
       img: '/assets/images/feature-3.png',
-      title: 'Data driven',
-      description: `Track and analyze the effectiveness of achievement-based campaigns to enhance loyalty marketing and business outcomes.`,
+      title: 'Campaigns',
+      description: `Enable customers to join achievement-based campaigns, offering benefits like points and rewards, and configure campaigns that reward both milestone completion and full challenge achievement.`,
     },
   ],
   es: [],

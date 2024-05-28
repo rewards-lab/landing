@@ -46,25 +46,6 @@
     }
   }
 
-  .main-bg {
-    width: 100%;
-    height: 400px;
-    background-size: contain !important;
-    position: relative;
-    background-repeat: no-repeat;
-    border-radius: 4px;
-    &::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      inset: 0;
-      position: absolute;
-      background: inherit;
-      filter: blur(55px) contrast(200%);
-      z-index: -1;
-      opacity: 0.5;
-    }
-  }
   img {
     &::after {
       content: '';
@@ -294,18 +275,25 @@
   ::ng-deep pre {
     font-family: monospace;
     font-size: 1rem;
-    .hljs-keyword {
+    .keyword {
       color: $indigo-300;
     }
-    .hljs-string {
-      color: $green-300;
+    .string {
+      color: $green-400;
     }
-    .hljs-attr {
+    .attr {
       color: $orange-300;
+      color: var(--bs-primary);
     }
-    .hljs-number {
-      color: $yellow-300;
+    .number {
+      color: $orange-500;
     }
+    .comment {
+      color: $gray-700;
+    }
+    // .method {
+    //   color: var(--bs-primary);
+    // }
   }
 
   .dash {

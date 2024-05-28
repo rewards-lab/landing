@@ -7,15 +7,27 @@ export const PricingPlansCompareModel: Record<string, PricingPlanCompare[]> = {
       list: [
         {
           label: 'Users',
-          starter: 'Up to 1000 users',
-          pro: 'Up to 10000 users',
-          enterprise: 'Unlimited users',
+          starter: 'Up to 5000',
+          pro: 'Up to 10000',
+          enterprise: 'Unlimited',
         },
         {
           label: 'Events',
-          starter: 'Up to 1000 events',
-          pro: 'Up to 10000 events',
-          enterprise: 'Unlimited events',
+          starter: 'Up to 5000',
+          pro: 'Up to 10000',
+          enterprise: 'Unlimited',
+        },
+        {
+          label: 'Achievements',
+          starter: 'Up to 10 ',
+          pro: 'Up to 100 ',
+          enterprise: 'Unlimited ',
+        },
+        {
+          label: 'Tiers',
+          starter: 'Up to 3',
+          pro: 'Up to 10',
+          enterprise: 'Unlimited',
         },
         {
           label: 'Customization',
@@ -54,9 +66,15 @@ export const PricingPlansCompareModel: Record<string, PricingPlanCompare[]> = {
         },
         {
           label: 'Webhooks',
-          starter: '<i class="ti ti-x"></i>',
+          starter: '<i class="ti ti-check"></i>',
           pro: '<i class="ti ti-check"></i>',
           enterprise: '<i class="ti ti-check"></i>',
+        },
+        {
+          label: 'Webhook calls',
+          starter: 'Up to 5000',
+          pro: 'Up to 100000',
+          enterprise: 'Unlimited',
         },
       ],
     },

@@ -13,13 +13,14 @@ import { DashModel } from '../../../../shared/models/dash.model';
 import { FeaturesModel } from '../../../../shared/models/features.model';
 import { HowItWorksModel } from '../../../../shared/models/how-it-works.model';
 import { MarqueeModel } from '../../../../shared/models/marquee.model';
+import { MainAnimationComponent } from './components/main-animation/main-animation.component';
 
 @Component({
   selector: 'app-landing',
-  standalone: true,
-  imports: [SafePipe, TranslateModule],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
+  standalone: true,
+  imports: [SafePipe, TranslateModule, MainAnimationComponent],
 })
 export class LandingComponent {
   #translateService: TranslateService = inject(TranslateService);
@@ -30,7 +31,8 @@ export class LandingComponent {
   public brands: string[] = BrandsModel;
   public activeFeature = 0;
   public codePlatforms = CodePlatformsModel;
-  public code: string = ConsoleCodeModel;
+  public code: string[] = ConsoleCodeModel;
+  public codeTab: number = 0;
   public marquee = [...MarqueeModel, ...MarqueeModel];
   public urls = environment.urls;
 }

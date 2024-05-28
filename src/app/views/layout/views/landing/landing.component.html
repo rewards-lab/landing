@@ -15,13 +15,7 @@
 </section>
 
 <section class="">
-  <div class="container d-none d-lg-flex justify-content-center z-2 position-relative">
-    <div
-      class="card main-bg img-fluid rounded-4 p-5"
-      style="height: 600px; background-position: center !important"
-      [style.backgroundImage]="'url(' + ('LANDING.MAIN_BG' | translate) + ')'"
-    ></div>
-  </div>
+  <app-main-animation></app-main-animation>
   <section class="d-none d-lg-flex text-center z-1 position-relative" style="padding: 200px 0rem 6rem; margin-top: -150px">
     <div class="top-0 brands-img-scroll w-100 h-100 position-absolute z-0 p-5">
       <div class="top-0 bg bg-primary w-100 h-100 z-0 rounded-5"></div>
@@ -185,19 +179,19 @@
           <div class="card-header">
             <ul class="nav nav-tabs card-header-tabs">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page">
+                <a class="nav-link" style="cursor: pointer" aria-current="page" (click)="codeTab = 0" [class.active]="codeTab === 0">
                   <i class="ti ti-link me-2"></i>
                   {{ 'LANDING.THE_CODE_TAB_1' | translate }}
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a class="nav-link" style="cursor: pointer" (click)="codeTab = 1" [class.active]="codeTab === 1">
                   <i class="ti ti-link me-2"></i>
                   {{ 'LANDING.THE_CODE_TAB_2' | translate }}
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link">
+                <a class="nav-link" style="cursor: pointer" (click)="codeTab = 2" [class.active]="codeTab === 2">
                   <i class="ti ti-link me-2"></i>
                   {{ 'LANDING.THE_CODE_TAB_3' | translate }}
                 </a>
@@ -205,7 +199,7 @@
             </ul>
           </div>
           <div class="card-body pt-0">
-            <pre class="m-0" [innerHTML]="code | safe: 'html'"></pre>
+            <pre class="mb-0 mt-3" [innerHTML]="code[codeTab] | safe: 'html'"></pre>
             <div class="flickering"></div>
           </div>
         </div>
